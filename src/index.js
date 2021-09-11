@@ -4,9 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import CardList from "./components/CardList";
+import Gambar from "./assets/images/amd.jpg"
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <CardList 
+      name="Bagus" 
+      nim="21120118120003" 
+      kelompok="12" 
+      isNameBold
+      image={Gambar}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
