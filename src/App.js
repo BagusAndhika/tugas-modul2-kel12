@@ -1,22 +1,36 @@
-import './App.css';
+import React, { Component } from 'react';
+import Info from './components/info';
 
-function App() {
-  return (
-    <div className="C">
-      <div
-        className="flex items-center justify-center bg-gray-50"
-        style={{ height: "100vh"}}
-        >
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
-            <span className="block"> Tugas Praktikum RPLBK </span>
-            <span className="block text-indigo-600"> Modul 2</span>
-            <p className="text-center text-gray-300 font-normal">
-              " Tugas ini menggunakan CardList"
-            </p>
-          </h2>
+export default class App extends Component {
+  render() {
+    const pemilik = [
+      {
+        name: 'Bagus Andhika',
+        nomor: '089xxxxxxxx',
+        email: 'bagusandhika01@gmail.com',
+      },
+      {
+        name: 'Milleano',
+        nomor: '088xxxxxxxx',
+        email: 'adisantiko10@gmail.com',
+      },
+    ];
+
+    return (
+      <div className="bg-white">
+        <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+          <br></br>
+          <br></br>
+          <h1 className="font-bold text-3xl">Kelompok 12 Praktikum RPLBK</h1>
+          <div className="">
+            {pemilik.map((test) => {
+              return <Info name={test.name} nomor={test.nomor} email={test.email} />;
+            })}
+          </div>
         </div>
-    </div> 
-  );
+        <footer />
+      </div>
+    );
+  }
 }
 
-export default App;

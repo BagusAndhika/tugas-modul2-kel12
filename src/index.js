@@ -5,18 +5,29 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import CardList from "./components/CardList";
-import Gambar from "./assets/images/amd.jpg"
+
+const data = [
+  {
+    name: "HTML CSS", 
+    deskripsi:"HTML adalah bahasa markup standar untuk membuat dan menyusun halaman dan aplikasi web", 
+    imageSrc: "https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-html-logo-0.png"
+  }, 
+  {
+    name: "CSS", 
+    deskripsi:"CSS merupakan salah satu bahasa pemrograman web untuk mengendalikan beberapa komponen dalam sebuah web", 
+    imageSrc: "https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-css-logo-png-transparent-svg-vector-bie-supply-9.png"
+  }, 
+  {
+    name: "Javascript", 
+    deskripsi:"JavaScript adalah bahasa pemrograman yang digunakan dalam pengembangan website agar lebih dinamis dan interaktif.", 
+    imageSrc: "https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png"
+  }
+]
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <CardList 
-      name="Bagus" 
-      nim="21120118120003" 
-      kelompok="12" 
-      isNameBold
-      image={Gambar}
-    />
+    <CardList data={data}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
